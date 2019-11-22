@@ -1,11 +1,9 @@
 module.exports = function(server){
-
-    server.get('/', function(req, res, next){       
-        res.json({
-            "status": "OK"
-        })
-    })
     
+    server.route('/')
+        .get((req, res) => { res.json({"status": "OK"}) })
+    
+        
  }
 
 

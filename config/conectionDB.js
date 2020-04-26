@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
   host : 'localhost',
   user : 'root',
   password : '2047',
-  database : 'testeapi'
+  database : 'teste_api_node'
 })
 
 try {
@@ -14,4 +14,4 @@ try {
   console.log(error)
 }
 
-module.exports = (connection)
+module.exports = connection

@@ -4,11 +4,12 @@
   "description": "It's an api model with node and own authentication through login and session",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "author": "Rafael Augusto Rosa De Morais",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
   }
 }

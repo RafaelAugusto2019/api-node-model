@@ -1,7 +1,8 @@
 var userAuthentication = require("../controller/authentication.js")
 
-var utilsQuery = require("../utils/querysDB.js")
-var connectionDB = require("../config/conectionDB.js")
+function middleJWTAutorization(req, res, next){
+
+}
 
 module.exports = function(server){
        

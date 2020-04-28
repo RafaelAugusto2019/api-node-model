@@ -1,5 +1,5 @@
 var utilsQuery = require("../utils/querysDB.js")
-var connectionDB = require("../config/conectionDB.js")
+var connectionDB = require("../configuration/conectionDB.js")
 
 function userAuthenticationRepository(user, password){    
     return new Promise( (resolve, reject) => {

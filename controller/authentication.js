@@ -1,4 +1,5 @@
 var userAuthenticationRepository = require("../repository/authenticationRepository.js")
+var { generateJWT } = require("../service/jwt.js")
 
 async function userAuthentication(req, res){
 
@@ -6,10 +7,11 @@ async function userAuthentication(req, res){
                                                    
     switch (status) {
         case 200:
-                res.status(200).json({"Status": "Com sucesso!" })
+                const token = await generateJWT()
+                res.status(200).json({"x-auth-token": token })
             break;
         case 422:
-                res.status(422).json({"Status": "Com falha!" })
+                res.status(422).json({"Status": "No authenticated" })
             break;
         default:
                 res.status(503).json({"Error": "Erro no servidor" })

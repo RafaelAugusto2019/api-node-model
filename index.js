@@ -1,2 +1,2 @@
-const server = require('./config/server.js')
+const server = require('./configuration/server.js')
 require('./routes/routes.js')(server)

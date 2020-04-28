@@ -17,9 +17,9 @@ function generateJWT (){
 function validJWT (token){
     return new Promise( function(resolve, reject) {
         jwt.verify(token, PRIVATE_KEY, function(err, decoded) {
-            if (err) resolve(false)
+            if (err) 
+                resolve(false)
             
-            console.log(decoded)
             resolve(true)
         }); 
     })

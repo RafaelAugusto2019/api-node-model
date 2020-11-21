@@ -1,5 +1,11 @@
 var cryptography = require("../service/cryptography.js")
 
+/**
+ * Function test to authentication middle 
+ * 
+ * @param {*} req Request of express function - Consult header of request 
+ * @param {*} res Response of express function - Send the response to client
+ */
 function simpleTest(req, res){
 
     let testCrypto = cryptography.crypGerateAES_256('Teste')

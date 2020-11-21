@@ -5,7 +5,11 @@ const server = express()
 
 
 server.listen(port, function(){
-    console.log("Server is running!!")
+    try {
+        console.log("Server is running!")
+    } catch (error) {
+        console.log("Error - Server isn't running!")
+    }
 })
 
 module.exports = server

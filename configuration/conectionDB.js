@@ -9,8 +9,9 @@ var connection = mysql.createConnection({
 
 try {
   connection.connect()
+  console.log("DataBase connected!")
 } catch (error) {
-  console.log("Erro ao conectar com o banco de dados!")
+  console.log("Error - Trying to connect in the DataBase!")
   console.log(error)
 }
 

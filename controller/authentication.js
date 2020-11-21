@@ -2,6 +2,12 @@ var userAuthenticationRepository = require("../repository/authenticationReposito
 const functions = require('../utils/functions.js')
 var { generateJWT } = require("../service/jwt.js")
 
+/**
+ * Function to authenticate the cliente with User and Password
+ * 
+ * @param {*} req Request of express function - Consult header of request 
+ * @param {*} res Response of express function - Send the response to client
+ */
 async function userAuthentication(req, res){
     const valuesHeader = await functions.headerSplit(req) // values of positions of vector - [0] -> user [1]-> senha
 
@@ -13,10 +19,10 @@ async function userAuthentication(req, res){
                 res.status(200).json({"x-auth-token": token })
             break;
         case 422:
-                res.status(422).json({"Status": "No authenticated" })
+                res.status(422).json({"Error": "No authenticated" })
             break;
         default:
-                res.status(503).json({"Error": "Erro no servidor" })
+                res.status(503).json({"Error": "Erro in the server" })
     }
        
 }

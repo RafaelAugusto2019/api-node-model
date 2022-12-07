@@ -9,7 +9,7 @@
   "author": "Rafael Augusto Rosa De Morais",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mysql": "^2.18.1",
     "jsonwebtoken": "^8.5.1"
   }
